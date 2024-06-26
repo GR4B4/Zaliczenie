@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sklep Muzyczny "Melody Manor"</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0ff; 
+            margin: 0;
+            padding: 0;
+            padding-bottom: 100px;
+        }
+
+        header {
+            background-color: #0055aa; 
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+            position: relative;
+        }
+
+        header a {
+            color: white;
+            text-decoration: none;
+        }
+
+        header .language-selector {
+            position: absolute;
+            top: 10px;
+            right: 20px;
+            background-color: #003366; 
+            color: white;
+            border: none;
+            padding: 5px;
+            font-size: 1em;
+        }
+
+        main {
+            padding: 20px;
+            text-align: center;
+        }
+
+        section {
+            margin-bottom: 40px;
+        }
+
+        h2 {
+            font-size: 2em;
+            color: #003366; 
+        }
+
+        .item-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+        }
+
+        .item {
+            box-sizing: border-box;
+        }
+
+        .item img {
+            width: 100%;
+            height: 200px; 
+            object-fit: cover;
+            border: 1px solid #ccc; 
+            border-radius: 5px;
+        }
+
+        .item h3 {
+            margin: 10px 0;
+            color: #003366; 
+            font-size: 1.25em;
+        }
+
+        footer {
+            background-color: #0055aa;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+
+        #highContrastButton,
+        #enlargeTextButton {
+            background-color: #003366;
+            color: white;
+            border: none;
+            padding: 15px 25px;
+            cursor: pointer;
+            font-size: 1em;
+        }
+
+        #highContrastButton {
+            position: absolute;
+            top: 10px;
+            left: 20px;
+        }
+
+        #enlargeTextButton {
+            position: absolute;
+            top: 70px;
+            left: 20px;
+        }
+
+        .high-contrast {
+            background-color: black;
+        }
+
+        .high-contrast h1,
+        .high-contrast h2,
+        .high-contrast h3,
+        .high-contrast p,
+        .high-contrast li {
+            color: yellow;
+        }
+
+        .enlarge-text {
+            font-size: 1.25em;
+        }
+
+        .enlarge-text h1,
+        .enlarge-text h2,
+        .enlarge-text h3,
+        .enlarge-text p,
+        .enlarge-text li {
+            font-size: 1.25em;
+        }
+
+        a {
+            color: #003366;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        .text-block {
+            display: block;
+            width: 100%;
+            text-align: center;
+        }
+
+        .text-block p {
+            margin: 5px 0;
+            font-size: 1em; 
+        }
+
+        @media (min-width: 768px) {
+            .service-container {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                gap: 20px;
+            }
+            .service-container .item {
+                flex: 1;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Witaj w Sklepie Muzycznym "Melody Manor"</h1>
+        <button id="highContrastButton" aria-label="Włącz wysoki kontrast" tabindex="0">Wysoki kontrast</button>
+        <button id="enlargeTextButton" aria-label="Powiększ tekst o 50%" tabindex="0">Powiększ tekst o 25%</button>
+        <select class="language-selector" aria-label="Wybierz język" tabindex="0">
+            <option value="pl">Polski</option>
+            <option value="en">Angielski</option>
+            <option value="uk">Ukraiński</option>
+        </select>
+    </header>
+
+    <main>
+        <section>
+            <h2>Instrumenty</h2>
+            <div class="item-container">
+                <div class="item">
+                    <a href="https://www.gibson.com/en-US/Collection/electric">
+                        <img src="gitara.png" label="Gitary" aria-describedby="gitary">
+                        <h3>Gitary</h3>
+                    </a>
+                </div>
+                <div class="item">
+                    <a href="klawisze.html">
+                        <img src="klawisze.png" aria-label="Klawisze" aria-describedby="klawisze">
+                        <h3>Klawisze</h3>
+                    </a>
+                </div>
+                <div class="item">
+                    <a href="dete.html">
+                        <img src="dete.png" aria-labelledby="Instrumenty dęte" aria-describedby="instrumety dete" style="max-width: 100%; max-height: 100%;">
+                        <h3>Instrumenty dęte</h3>
+                    </a>
+                </div>
+                <div class="item">
+                    <a href="perkusja.html">
+                        <img src="perkusja.png" longdesc="Perkusje"  aria-describedby="perkusja" style="max-width: 100%; max-height: 100%;">
+                        <h3>Perkusje</h3>
+                    </a>
+                </div>
+            </div>
+        </section>
+        
+        <section>
+            <h2>Akcesoria</h2>
+            <div class="item-container">
+                <div class="item">
+                    <a href="wzmacniacze.html">
+                        <img src="wzmacniacz.png" alt="Wzmacniacz">
+                        <h3>Wzmacniacze</h3>
+                    </a>
+                </div>
+                <div class="item">
+                    <a href="efekty.html">
+                        <img src="efekty.png" alt="Efekty gitarowe">
+                        <h3>Efekty gitarowe</h3>
+                    </a>
+                </div>
+                <div class="item">
+                    <a href="pokrowce.html">
+                        <img src="case.png" alt="Pokrowce i futerały">
+                        <h3>Pokrowce i futerały</h3>
+                    </a>
+                </div>
+                <div class="item">
+                    <a href="struny.html">
+                        <img src="struny.png" alt="Struny">
+                        <h3>Struny</h3>
+                    </a>
+                </div>
+                <div class="item">
+                    <a href="paski.html">
+                        <img src="pasek.png" alt="Paski">
+                        <h3>Paski</h3>
+                    </a>
+                </div>
+                <div class="item">
+                    <a href="kable.html">
+                        <img src="kabel.png" alt="Kable">
+                        <h3>Kable</h3>
+                    </a>
+                </div>
+            </div>
+        </section>
+        
+        <section>
+            <h2><a href="uslugi.html">Usługi</a></h2>
+            <div class="service-container">
+                <div class="item">
+                    <a href="uslugi.html">
+                        <img src="uslugi.jpg" alt="Usługi">
+                    </a>
+                </div>
+                <div class="item text-block">
+                <ol>
+                        <li><p class="enlarged-text">Oferujemy szeroki wybór instrumentów dętych, takich jak trąbki, puzony, saksofony, flety i wiele innych.</p></li>
+                        <li><p class="enlarged-text">Nasi eksperci pomogą Ci wybrać odpowiedni instrument oraz udzielą porad dotyczących technik gry i konserwacji.</p></li>
+                </ol>
+                    </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>Kontakt: info@guitarworld.com</p>
+    </footer>
+
+    <script>
+        const highContrastButton = document.getElementById('highContrastButton');
+        const enlargeTextButton = document.getElementById('enlargeTextButton');
+        const body = document.body;
+
+        highContrastButton.addEventListener('click', () => {
+            body.classList.toggle('high-contrast');
+        });
+
+        enlargeTextButton.addEventListener('click', () => {
+            body.classList.toggle('enlarge-text');
+        });
+    </script>
+</body>
+</html>
